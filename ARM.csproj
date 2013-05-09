@@ -32,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,10 +54,87 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_AddOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddOrg.Designer.cs">
+      <DependentUpon>Form_AddOrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_deduction_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_deduction_add.Designer.cs">
+      <DependentUpon>Form_deduction_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_deduction_addItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_deduction_addItem.Designer.cs">
+      <DependentUpon>Form_deduction_addItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_scharge_addItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_scharge_addItem.Designer.cs">
+      <DependentUpon>Form_scharge_addItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_scharge_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_scharge_add.Designer.cs">
+      <DependentUpon>Form_scharge_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Settings.Designer.cs">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_timesheet_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_timesheet_add.Designer.cs">
+      <DependentUpon>Form_timesheet_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_timesheet_addItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_timesheet_addItem.Designer.cs">
+      <DependentUpon>Form_timesheet_addItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mydbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mydbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddOrg.resx">
+      <DependentUpon>Form_AddOrg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_deduction_add.resx">
+      <DependentUpon>Form_deduction_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_deduction_addItem.resx">
+      <DependentUpon>Form_deduction_addItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_scharge_addItem.resx">
+      <DependentUpon>Form_scharge_addItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_scharge_add.resx">
+      <DependentUpon>Form_scharge_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Settings.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_timesheet_add.resx">
+      <DependentUpon>Form_timesheet_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_timesheet_addItem.resx">
+      <DependentUpon>Form_timesheet_addItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -64,6 +145,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="mydbDataSet.xsc">
+      <DependentUpon>mydbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mydbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mydbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mydbDataSet.xss">
+      <DependentUpon>mydbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +171,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{5bbec08d-9466-4538-a13d-7a9f86df5439}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Main\Main.csproj">
       <Project>{055f7f50-87b5-4b64-92bf-d9cebfc2c641}</Project>
       <Name>Main</Name>
